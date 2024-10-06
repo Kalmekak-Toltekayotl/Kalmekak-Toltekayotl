@@ -6,70 +6,56 @@
    <title>KALMEKAK TOLTEKAYOTL</title>
    <style>
        body {
-    font-family: 'Times New Roman', serif;
-    background-color: #000;
-    color: #d4af37; /* Dorado */
-    margin: 0;
-    padding: 0;
-}
-header {
-    text-align: center;
-    padding: 50px 0;
-}
-h1 {
-    font-size: 3em;
-    margin: 0;
-}
-.offers {
-    background-color: #222;
-    padding: 30px;
-    text-align: center;
-}
-.offers h2 {
-    color: #d4af37;
-}
-.course-list {
-    list-style: none;
-    padding: 0;
-}
-.course-list li {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-.contact {
-    text-align: center;
-    padding: 20px;
-}
-.contact form {
-    margin-top: 20px;
-}
-.contact input, .contact textarea {
-    padding: 10px;
-    margin: 10px;
-    width: 80%;
-    max-width: 400px;
-    border: 2px solid #d4af37;
-    background-color: #333;
-    color: #d4af37;
-}
-footer {
-    background-color: #222;
-    color: #d4af37;
-    text-align: center;
-    padding: 20px 0;
-}
+           font-family: 'Arial', serif;
+           background-color: #000;
+           color: #d4af37;
+           margin: 0;
+           padding: 0;
+       }
+       nav {
+           text-align: center;
+           padding: 20px;
+           background-color: #222;
+       }
+       nav button {
+           background-color: #000;
+           color: #d4af37;
+           border: 2px solid #d4af37;
+           padding: 10px 20px;
+           margin: 5px;
+           font-size: 1.1em;
+           cursor: pointer;
+           transition: background-color 0.3s ease, color 0.3s ease;
+       }
+       nav button:hover {
+           background-color: #d4af37;
+           color: #000;
+       }
+       section {
+           padding: 50px;
+           border-bottom: 1px solid #444;
+       }
+       header {
+           text-align: center;
+           padding: 50px 0;
+           background-color: #111;
+       }
+       html {
+           scroll-behavior: smooth;
+       }
    </style>
 </head>
 <body>
    <header>
        <h1>Centro de Capacitación para el Autoempleo KALMEKAK TOLTEKAYOTL</h1>
+       <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
    </header>
 
    <nav>
-       <button onclick="location.href='#inicio'">Inicio</button>
-       <button onclick="location.href='#oferta-educativa'">Oferta Educativa</button>
-       <button onclick="location.href='#galeria'">Galería de Graduados</button>
-       <button onclick="location.href='#contacto'">Contacto</button>
+       <a href="#inicio"><button>Inicio</button></a>
+       <a href="#oferta-educativa"><button>Oferta Educativa</button></a>
+       <a href="#galeria"><button>Galería de Graduados</button></a>
+       <a href="#contacto"><button>Contacto</button></a>
    </nav>
 
    <section id="inicio">
@@ -84,13 +70,16 @@ footer {
 
    <section id="galeria">
        <h2>Galería de Graduados</h2>
-       <img src="ruta/a/tu/imagen.jpg" alt="Graduado 1">
+       <img src="ruta/a/tu/imagen.jpg" alt="Imagen de Graduado" width="200">
    </section>
 
    <section id="contacto">
        <h2>Contacto</h2>
        <form>
-           <!-- Formulario aquí -->
+           <input type="text" placeholder="Nombre Completo"><br>
+           <input type="email" placeholder="Correo Electrónico"><br>
+           <textarea placeholder="Escribe tu mensaje"></textarea><br>
+           <button type="submit">Enviar</button>
        </form>
    </section>
 </body>
