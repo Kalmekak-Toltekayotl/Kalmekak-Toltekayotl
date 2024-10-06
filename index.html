@@ -4,9 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KALMEKAK TOLTEKAYOTL</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000;
+            color: #d4af37; /* Escala de dorado */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .offers {
+            background-color: #222;
+            padding: 30px;
+            text-align: center;
+        }
+        .offers h2 {
+            color: #d4af37;
+        }
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+        .course-list li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .contact {
+            text-align: center;
+            padding: 20px;
+        }
+        .contact form {
+            margin-top: 20px;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 2px solid #d4af37;
+            background-color: #333;
+            color: #d4af37;
+        }
+        footer {
+            background-color: #222;
+            color: #d4af37;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Centro de Capacitación para el Autoempleo KALMEKAK TOLTEKAYOTL</h1>
-    <p>Próximamente, aquí encontrarás información sobre nuestros cursos y servicios.</p>
+
+    <header>
+        <h1>KALMEKAK TOLTEKAYOTL</h1>
+        <p>Centro de Capacitación para el Autoempleo</p>
+    </header>
+
+    <section class="offers">
+        <h2>Próximos Cursos</h2>
+        <ul class="course-list">
+            <li>Curso de Terapias Alternativas - Fecha de inicio: Noviembre 2024</li>
+            <li>Curso de Estilismo Profesional - Fecha de inicio: Diciembre 2024</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <p>Teléfono: 7731538233</p>
+        <p>Email: kalmekaktoltecayotl@gmail.com</p>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre Completo" required><br>
+            <input type="email" name="email" placeholder="Correo Electrónico" required><br>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 KALMEKAK TOLTEKAYOTL. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
