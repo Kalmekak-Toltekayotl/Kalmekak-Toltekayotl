@@ -105,6 +105,23 @@
            background-color: #d4af37;
            color: #000;
        }
+
+       .gallery {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+           gap: 20px;
+           padding: 20px;
+           justify-items: center;
+       }
+
+       .gallery img {
+           width: 100%;
+           height: auto;
+           border: 2px solid #d4af37;
+           padding: 10px;
+           background-color: #222;
+           max-width: 300px; /* Tamaño máximo para las imágenes */
+       }
    </style>
 </head>
 <body>
@@ -138,7 +155,20 @@
 
    <section id="galeria">
        <h2>Galería de Graduados</h2>
-       <img src="ruta/a/tu/imagen.jpg" alt="Imagen de Graduado" width="200">
+       <div class="gallery">
+           <!-- Aquí agregamos las imágenes de la galería con los nombres corregidos -->
+           <img src="images/Masoterapia_1.png" alt="Masoterapia 1">
+           <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos_1.png" alt="Trabajos realizados por las alumnas y alumnos 1">
+           <img src="images/Tratamiento_Capilar_1.png" alt="Tratamiento Capilar 1">
+           <img src="images/Tratamiento_Facial_1.png" alt="Tratamiento Facial 1">
+           <img src="images/Tratamiento_Facial_2.png" alt="Tratamiento Facial 2">
+           <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos.png" alt="Trabajos realizados por las alumnas y alumnos">
+           <img src="images/Grupo_de_Herbolaria.png" alt="Grupo de Herbolaria">
+           <img src="images/Grupo_de_Tratamiento_Facial.png" alt="Grupo de Tratamiento Facial">
+           <img src="images/Herbolaria_1.png" alt="Herbolaria 1">
+           <img src="images/Grupo_de_Barbería.png" alt="Grupo de Barbería">
+           <img src="images/Barbería_1.png" alt="Barbería 1">
+       </div>
    </section>
 
    <section id="contacto">
