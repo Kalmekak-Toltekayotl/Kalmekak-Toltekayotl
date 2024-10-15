@@ -12,11 +12,13 @@
            margin: 0;
            padding: 0;
        }
+
        nav {
            text-align: center;
            padding: 20px;
            background-color: #222;
        }
+
        nav button {
            background-color: #000;
            color: #d4af37;
@@ -27,28 +29,93 @@
            cursor: pointer;
            transition: background-color 0.3s ease, color 0.3s ease;
        }
+
        nav button:hover {
            background-color: #d4af37;
            color: #000;
        }
+
        section {
            padding: 50px;
            border-bottom: 1px solid #444;
        }
+
        header {
            text-align: center;
            padding: 50px 0;
            background-color: #111;
        }
+
        html {
            scroll-behavior: smooth;
+       }
+
+       /* Estilos para los logos y el título */
+       .logo-container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-top: 20px;
+       }
+
+       .logo {
+           width: auto;
+           height: 60px; /* Puedes ajustar el tamaño según lo prefieras */
+           margin: 0 15px;
+       }
+
+       h1 {
+           font-size: 60px;
+           color: #d4af37;
+           text-align: center;
+           margin: 0;
+       }
+
+       h2 {
+           font-size: 24px;
+           color: #d4af37;
+           text-align: center;
+           margin: 10px 0;
+       }
+
+       form input, form textarea {
+           display: block;
+           width: 100%;
+           max-width: 400px;
+           margin: 10px auto;
+           padding: 10px;
+           border: 1px solid #d4af37;
+           background-color: #000;
+           color: #d4af37;
+       }
+
+       form button {
+           background-color: #000;
+           color: #d4af37;
+           border: 2px solid #d4af37;
+           padding: 10px 20px;
+           margin: 5px auto;
+           font-size: 1.1em;
+           cursor: pointer;
+           transition: background-color 0.3s ease, color 0.3s ease;
+           display: block;
+       }
+
+       form button:hover {
+           background-color: #d4af37;
+           color: #000;
        }
    </style>
 </head>
 <body>
    <header>
-       <h1>Centro de Capacitación para el Autoempleo</h1> 
-       <h2>KALMEKAK TOLTEKAYOTL</h2>
+       <div class="logo-container">
+           <!-- Añadir las imágenes de los logos a la izquierda y derecha del nombre -->
+           <img src="images/REDONDO_PRUEBA_3_FINAL.png" alt="Logo Izquierdo" class="logo">
+           <h1>Kalmekak Toltekayotl</h1>
+           <img src="images/PRUEBA_4_FINAL.png" alt="Logo Derecho" class="logo">
+       </div>
+       <h2>Centro de Capacitación para el Autoempleo</h2>
        <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
    </header>
 
