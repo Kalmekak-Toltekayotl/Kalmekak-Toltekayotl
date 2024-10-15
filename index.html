@@ -108,7 +108,7 @@
 
        .gallery {
            display: grid;
-           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajuste para aumentar el tamaño de las imágenes */
            gap: 20px;
            padding: 20px;
            justify-items: center;
@@ -125,13 +125,24 @@
            border: 2px solid #d4af37;
            padding: 10px;
            background-color: #222;
-           max-width: 600px; /* Tamaño duplicado de las imágenes */
+           max-width: 1200px; /* Tamaño duplicado de las imágenes */
        }
 
        figcaption {
            margin-top: 10px;
            font-size: 16px;
            color: #d4af37;
+       }
+
+       /* Tamaño imagen Oferta Educativa */
+       .oferta-educativa img {
+           max-width: 360px; /* El doble del tamaño de los logos */
+           height: auto;
+           border: 2px solid #d4af37;
+           padding: 10px;
+           background-color: #222;
+           display: block;
+           margin: 0 auto;
        }
    </style>
 </head>
@@ -159,9 +170,11 @@
        <p>Próximamente, aquí encontrarás información sobre nuestros cursos y servicios.</p>
    </section>
 
-   <section id="oferta-educativa">
+   <section id="oferta-educativa" class="oferta-educativa">
        <h2>Oferta Educativa</h2>
        <p>Aquí se encuentran los cursos que ofrecemos...</p>
+       <!-- Nueva imagen agregada a la oferta educativa con el doble del tamaño de los logos -->
+       <img src="images/Curso_ZEMPOHUALXOCHITL.jpg" alt="Curso Zempoalxochitl">
    </section>
 
    <section id="galeria">
