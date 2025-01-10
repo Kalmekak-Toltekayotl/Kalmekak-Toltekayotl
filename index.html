@@ -50,6 +50,7 @@
            scroll-behavior: smooth;
        }
 
+       /* Estilos para los logos y el título */
        .logo-container {
            display: flex;
            justify-content: center;
@@ -59,7 +60,7 @@
 
        .logo {
            width: auto;
-           height: 180px;
+           height: 180px; /* Tamaño tres veces mayor */
            margin: 0 15px;
        }
 
@@ -75,24 +76,6 @@
            color: #d4af37;
            text-align: center;
            margin: 10px 0;
-       }
-
-       .convenio {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           margin: 20px 0;
-       }
-
-       .convenio p {
-           color: #d4af37;
-           font-size: 18px;
-           margin: 0 15px;
-       }
-
-       .convenio img {
-           height: 100px;
-           margin: 0 20px;
        }
 
        form input, form textarea {
@@ -123,6 +106,35 @@
            color: #000;
        }
 
+       .gallery {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajuste para aumentar el tamaño de las imágenes */
+           gap: 20px;
+           padding: 20px;
+           justify-items: center;
+       }
+
+       figure {
+           text-align: center;
+           color: #d4af37;
+       }
+
+       .gallery img {
+           width: 100%;
+           height: auto;
+           border: 2px solid #d4af37;
+           padding: 10px;
+           background-color: #222;
+           max-width: 1200px; /* Tamaño duplicado de las imágenes */
+       }
+
+       figcaption {
+           margin-top: 10px;
+           font-size: 16px;
+           color: #d4af37;
+       }
+
+      /* Ajuste para las imágenes en dos columnas */
        .oferta-educativa .galeria {
            display: grid;
            grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
@@ -140,17 +152,56 @@
            display: block;
            margin: 0 auto;
        }
+
+       /* Estilos para los convenios */
+       .convenios {
+           text-align: center;
+           margin-top: 20px;
+       }
+
+       .convenio {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 10px;
+           margin-bottom: 15px;
+       }
+
+       .convenio img {
+           max-width: 100px;
+           height: auto;
+       }
+
+       .convenio p {
+           font-size: 16px;
+           color: #d4af37;
+           margin: 0;
+       }
+
    </style>
 </head>
 <body>
    <header>
        <div class="logo-container">
+           <!-- Aumentar tamaño de los logos -->
            <img src="images/REDONDO_PRUEBA_3_FINAL.png" alt="Logo Izquierdo" class="logo">
            <h1>Kalmekak Toltekayotl</h1>
            <img src="images/PRUEBA_4_FINAL.png" alt="Logo Derecho" class="logo">
        </div>
        <h2>Centro de Capacitación para el Autoempleo</h2>
        <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
+       
+       <!-- Agregar convenios -->
+       <div class="convenios">
+           <div class="convenio">
+               <p>Tenemos convenio de colaboración con CECATI 55 para dar validez oficial SEP a tus conocimientos adquiridos con nosotros.</p>
+               <img src="images/CECATI.png" alt="Logotipo CECATI 55">
+           </div>
+           <div class="convenio">
+               <p>Contamos con Agentes Capacitadores Externos Autorizados y Registrados en STPS para dar validez oficial a nuestros cursos DC-3.</p>
+               <img src="images/STPS.png" alt="Logotipo STPS">
+           </div>
+       </div>
    </header>
 
    <nav>
@@ -176,24 +227,14 @@ Recuerda: tu educación no es un gasto, es una inversión. Elige la excelencia, 
        <h2>Oferta Educativa</h2>
        <p>Aquí se encuentran los cursos que ofrecemos para iniciar Enero 2025...</p>
        <div class="galeria">
-           <img src="images/1.png" alt="1">
-           <img src="images/2.png" alt="2">
-           <img src="images/3.png" alt="3">
-           <img src="images/4.png" alt="4">
-           <img src="images/5.png" alt="5">
-           <img src="images/6.png" alt="6">
-           <img src="images/7.png" alt="7">
-       </div>
-   </section>
-
-   <section class="convenio">
-       <p>Tenemos convenio de colaboración con CECATI 55 para dar validez oficial SEP a tus conocimientos adquiridos con nosotros</p>
-       <img src="images/CECATI.png" alt="Logo CECATI">
-   </section>
-
-   <section class="convenio">
-       <p>Contamos con Agentes Capacitadores Externos Autorizados y Registrados en STPS para dar validez oficial a nuestros cursos DC-3</p>
-       <img src="images/STPS.png" alt="Logo STPS">
+        <img src="images/1.png" alt="1">
+        <img src="images/2.png" alt="2">
+        <img src="images/3.png" alt="3">
+        <img src="images/4.png" alt="4">
+        <img src="images/5.png" alt="5">
+        <img src="images/6.png" alt="6">
+        <img src="images/7.png" alt="7">
+    </div>
    </section>
 
    <section id="galeria">
@@ -249,9 +290,9 @@ Recuerda: tu educación no es un gasto, es una inversión. Elige la excelencia, 
    <section id="contacto">
        <h2>Contacto</h2>
        <form>
-           <input type="text" placeholder="Nombre Completo"><br>
-           <input type="email" placeholder="Correo Electrónico"><br>
-           <textarea placeholder="Escribe tu mensaje"></textarea><br>
+           <input type="text" name="nombre" placeholder="Tu nombre">
+           <input type="email" name="email" placeholder="Tu correo">
+           <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
            <button type="submit">Enviar</button>
        </form>
    </section>
