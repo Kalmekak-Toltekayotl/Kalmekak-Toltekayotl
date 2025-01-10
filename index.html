@@ -1,248 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>KALMEKAK TOLTEKAYOTL</title>
-   <style>
-       body {
-           font-family: 'Arial', serif;
-           background-color: #000;
-           color: #d4af37;
-           margin: 0;
-           padding: 0;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Capacitación para el Autoempleo KALMEKAK TOLTEKAYOTL</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+        }
 
-       nav {
-           text-align: center;
-           padding: 20px;
-           background-color: #222;
-       }
+        header {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 20px;
+        }
 
-       nav button {
-           background-color: #000;
-           color: #d4af37;
-           border: 2px solid #d4af37;
-           padding: 10px 20px;
-           margin: 5px;
-           font-size: 1.1em;
-           cursor: pointer;
-           transition: background-color 0.3s ease, color 0.3s ease;
-       }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #d4af37; /* Dorado */
+        }
 
-       nav button:hover {
-           background-color: #d4af37;
-           color: #000;
-       }
+        header h1 span {
+            display: block;
+            font-size: 2rem;
+            color: #fff;
+        }
 
-       section {
-           padding: 50px;
-           border-bottom: 1px solid #444;
-       }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
 
-       header {
-           text-align: center;
-           padding: 50px 0;
-           background-color: #111;
-       }
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
 
-       html {
-           scroll-behavior: smooth;
-       }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-       /* Estilos para los logos y el título */
-       .logo-container {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           margin-top: 20px;
-       }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
 
-       .logo {
-           width: auto;
-           height: 180px; /* Tamaño tres veces mayor */
-           margin: 0 15px;
-       }
+        #oferta-educativa {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9; /* Fondo claro */
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1200px;
+            color: #333; /* Texto gris oscuro */
+        }
 
-       h1 {
-           font-size: 60px;
-           color: #d4af37;
-           text-align: center;
-           margin: 0;
-       }
+        #oferta-educativa h2 {
+            font-size: 2rem;
+            color: #d4af37; /* Dorado */
+        }
 
-       h2 {
-           font-size: 24px;
-           color: #d4af37;
-           text-align: center;
-           margin: 10px 0;
-       }
+        #oferta-educativa p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
-       form input, form textarea {
-           display: block;
-           width: 100%;
-           max-width: 400px;
-           margin: 10px auto;
-           padding: 10px;
-           border: 1px solid #d4af37;
-           background-color: #000;
-           color: #d4af37;
-       }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres imágenes por fila */
+            gap: 15px; /* Espacio entre las imágenes */
+            justify-items: center;
+        }
 
-       form button {
-           background-color: #000;
-           color: #d4af37;
-           border: 2px solid #d4af37;
-           padding: 10px 20px;
-           margin: 5px auto;
-           font-size: 1.1em;
-           cursor: pointer;
-           transition: background-color 0.3s ease, color 0.3s ease;
-           display: block;
-       }
+        .galeria img {
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid #d4af37; /* Borde dorado */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+        }
 
-       form button:hover {
-           background-color: #d4af37;
-           color: #000;
-       }
+        .galeria img:hover {
+            transform: scale(1.05); /* Zoom */
+            transition: transform 0.3s ease-in-out; /* Suaviza el zoom */
+        }
 
-       .gallery {
-           display: grid;
-           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajuste para aumentar el tamaño de las imágenes */
-           gap: 20px;
-           padding: 20px;
-           justify-items: center;
-       }
-
-       figure {
-           text-align: center;
-           color: #d4af37;
-       }
-
-       .gallery img {
-           width: 100%;
-           height: auto;
-           border: 2px solid #d4af37;
-           padding: 10px;
-           background-color: #222;
-           max-width: 1200px; /* Tamaño duplicado de las imágenes */
-       }
-
-       figcaption {
-           margin-top: 10px;
-           font-size: 16px;
-           color: #d4af37;
-       }
-
-       /* Tamaño imagen Oferta Educativa */
-       .oferta-educativa img {
-           max-width: 360px; /* El doble del tamaño de los logos */
-           height: auto;
-           border: 2px solid #d4af37;
-           padding: 10px;
-           background-color: #222;
-           display: block;
-           margin: 0 auto;
-       }
-   </style>
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 10px 0;
+            color: #d4af37;
+        }
+    </style>
 </head>
 <body>
-   <header>
-       <div class="logo-container">
-           <!-- Aumentar tamaño de los logos -->
-           <img src="images/REDONDO_PRUEBA_3_FINAL.png" alt="Logo Izquierdo" class="logo">
-           <h1>Kalmekak Toltekayotl</h1>
-           <img src="images/PRUEBA_4_FINAL.png" alt="Logo Derecho" class="logo">
-       </div>
-       <h2>Centro de Capacitación para el Autoempleo</h2>
-       <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
-   </header>
-
-   <nav>
-       <a href="#inicio"><button>Inicio</button></a>
-       <a href="#oferta-educativa"><button>Oferta Educativa</button></a>
-       <a href="#galeria"><button>Galería</button></a>
-       <a href="#contacto"><button>Contacto</button></a>
-   </nav>
-
-   <section id="inicio">
-       <h2>Bienvenido</h2>
-       <p>Próximamente, aquí encontrarás información sobre nuestros cursos y servicios.</p>
-   </section>
-
-   <section id="oferta-educativa" class="oferta-educativa">
-       <h2>Oferta Educativa</h2>
-       <p>Aquí se encuentran los cursos que ofrecemos...</p>
-       <!-- Nueva imagen agregada a la oferta educativa con el doble del tamaño de los logos -->
-       <div class="galeria">
-        <img src="images/1.jpg" alt="1">
-        <img src="images/2.jpg" alt="2">
-        <img src="images/3.jpg" alt="3">
-        <img src="images/4.jpg" alt="4">
-        <img src="images/5.jpg" alt="5">
-        <img src="images/6.jpg" alt="6">
-        <img src="images/7.jpg" alt="7">
-    </div>
-   </section>
-
-   <section id="galeria">
-       <h2>Galería</h2>
-       <div class="gallery">
-           <figure>
-               <img src="images/Masoterapia_1.jpg" alt="Masoterapia 1">
-               <figcaption>Masoterapia 1</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos_1.jpg" alt="Trabajos realizados por las alumnas y alumnos 1">
-               <figcaption>Trabajos realizados por las alumnas y alumnos 1</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Tratamiento_Capilar_1.jpg" alt="Tratamiento Capilar 1">
-               <figcaption>Tratamiento Capilar 1</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Tratamiento_Facial_1.jpg" alt="Tratamiento Facial 1">
-               <figcaption>Tratamiento Facial 1</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Tratamiento_Facial_2.jpg" alt="Tratamiento Facial 2">
-               <figcaption>Tratamiento Facial 2</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos.jpg" alt="Trabajos realizados por las alumnas y alumnos">
-               <figcaption>Trabajos realizados por las alumnas y alumnos</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Grupo_de_Herbolaria.jpg" alt="Grupo de Herbolaria">
-               <figcaption>Grupo de Herbolaria</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Grupo_de_Tratamiento_Facial.jpg" alt="Grupo de Tratamiento Facial">
-               <figcaption>Grupo de Tratamiento Facial</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Herbolaria_1.jpg" alt="Herbolaria 1">
-               <figcaption>Herbolaria 1</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Grupo_de_Barbería.jpg" alt="Grupo de Barbería">
-               <figcaption>Grupo de Barbería</figcaption>
-           </figure>
-           <figure>
-               <img src="images/Barbería_1.jpg" alt="Barbería 1">
-               <figcaption>Barbería 1</figcaption>
-           </figure>
-       </div>
-   </section>
-
-   <section id="contacto">
-       <h2>Contacto</h2>
-       <form>
-           <input type="text" placeholder="Nombre Completo"><br>
-           <input type="email" placeholder="Correo Electrónico"><br>
-           <textarea placeholder="Escribe tu mensaje"></textarea><br>
-           <button type="submit">Enviar</button>
-       </form>
-   </section>
+    <header>
+        <h1>
+            Centro de Capacitación para el Autoempleo<br>
+            <span>KALMEKAK TOLTEKAYOTL</span>
+        </h1>
+    </header>
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#oferta-educativa">Oferta Educativa</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Bienvenidos</h2>
+            <p>Somos el Centro de Capacitación para el Autoempleo, comprometidos con tu desarrollo profesional.</p>
+        </section>
+        <section id="oferta-educativa">
+            <h2>Oferta Educativa</h2>
+            <p>Aquí se encuentran los cursos que ofrecemos...</p>
+            <div class="galeria">
+                <img src="images/1.png" alt="Curso 1">
+                <img src="images/2.png" alt="Curso 2">
+                <img src="images/3.png" alt="Curso 3">
+                <img src="images/4.png" alt="Curso 4">
+                <img src="images/5.png" alt="Curso 5">
+                <img src="images/6.png" alt="Curso 6">
+                <img src="images/7.png" alt="Curso 7">
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Teléfono: <a href="tel:+7731538233">7731538233</a></p>
+            <p>Correo: <a href="mailto:kalmekaktoltecayotl@gmail.com">kalmekaktoltecayotl@gmail.com</a></p>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="correo" name="correo" required><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Centro de Capacitación para el Autoempleo KALMEKAK TOLTEKAYOTL. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
