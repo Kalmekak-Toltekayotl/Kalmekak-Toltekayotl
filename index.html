@@ -50,6 +50,7 @@
            scroll-behavior: smooth;
        }
 
+       /* Estilos para los logos y el título */
        .logo-container {
            display: flex;
            justify-content: center;
@@ -59,7 +60,7 @@
 
        .logo {
            width: auto;
-           height: 180px;
+           height: 180px; /* Tamaño tres veces mayor */
            margin: 0 15px;
        }
 
@@ -107,7 +108,7 @@
 
        .gallery {
            display: grid;
-           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajuste para aumentar el tamaño de las imágenes */
            gap: 20px;
            padding: 20px;
            justify-items: center;
@@ -118,30 +119,81 @@
            color: #d4af37;
        }
 
-       .gallery img, .oferta-educativa img {
+       .gallery img {
            width: 100%;
            height: auto;
            border: 2px solid #d4af37;
            padding: 10px;
            background-color: #222;
+           max-width: 1200px; /* Tamaño duplicado de las imágenes */
        }
 
+       figcaption {
+           margin-top: 10px;
+           font-size: 16px;
+           color: #d4af37;
+       }
+
+       /* Tamaño imagen Oferta Educativa */
        .oferta-educativa img {
-           max-width: 360px;
+           max-width: 360px; /* El doble del tamaño de los logos */
+           height: auto;
+           border: 2px solid #d4af37;
+           padding: 10px;
+           background-color: #222;
            display: block;
            margin: 0 auto;
        }
+
+       /* Estilos para los convenios */
+       .convenios {
+           text-align: center;
+           margin-top: 20px;
+       }
+
+       .convenio {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 10px;
+           margin-bottom: 15px;
+       }
+
+       .convenio img {
+           max-width: 100px;
+           height: auto;
+       }
+
+       .convenio p {
+           font-size: 16px;
+           color: #333;
+           margin: 0;
+       }
+
    </style>
 </head>
 <body>
    <header>
        <div class="logo-container">
+           <!-- Aumentar tamaño de los logos -->
            <img src="images/REDONDO_PRUEBA_3_FINAL.png" alt="Logo Izquierdo" class="logo">
            <h1>Kalmekak Toltekayotl</h1>
            <img src="images/PRUEBA_4_FINAL.png" alt="Logo Derecho" class="logo">
        </div>
        <h2>Centro de Capacitación para el Autoempleo</h2>
        <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
+       
+       <!-- Agregar convenios -->
+       <div class="convenios">
+           <div class="convenio">
+               <p>Tenemos convenio de colaboración con CECATI 55 para dar validez oficial SEP a tus conocimientos adquiridos con nosotros.</p>
+               <img src="images/CECATI.png" alt="Logotipo CECATI 55">
+           </div>
+           <div class="convenio">
+               <p>Contamos con Agentes Capacitadores Externos Autorizados y Registrados en STPS para dar validez oficial a nuestros cursos DC-3.</p>
+               <img src="images/STPS.jpg" alt="Logotipo STPS">
+           </div>
+       </div>
    </header>
 
    <nav>
@@ -153,88 +205,79 @@
 
    <section id="inicio">
        <h2>Bienvenido</h2>
-       <p>"Cuando se trata de tu futuro, la calidad no es opcional."
-
-En el Centro de Capacitación para el Autoempleo KALMEKAK TOLTEKAYOTL, no solo enseñamos, formamos profesionales. Contamos con 9 años de experiencia, instructores certificados a nivel federal y programas diseñados para brindarte las herramientas necesarias para destacar en el mundo laboral.
-
-Sabemos que existen opciones más económicas, pero ¿estás dispuesto a sacrificar calidad por un precio más bajo?
-Aquí no solo obtienes conocimientos, sino también constancias oficiales y la confianza de haber sido capacitado por expertos.
-
-Recuerda: tu educación no es un gasto, es una inversión. Elige la excelencia, elige KALMEKAK TOLTEKAYOTL.</p>
+       <p>Próximamente, aquí encontrarás información sobre nuestros cursos y servicios.</p>
    </section>
 
    <section id="oferta-educativa" class="oferta-educativa">
        <h2>Oferta Educativa</h2>
-       <p>Aquí se encuentran los cursos que ofrecemos para iniciar Enero 2025...</p>
-       <div class="gallery">
-           <img src="images/1.png" alt="Imagen 1">
-           <img src="images/2.png" alt="Imagen 2">
-           <img src="images/3.png" alt="Imagen 3">
-           <img src="images/4.png" alt="Imagen 4">
-           <img src="images/5.png" alt="Imagen 5">
-           <img src="images/6.png" alt="Imagen 6">
-           <img src="images/7.png" alt="Imagen 7">
-       </div>
+       <p>Aquí se encuentran los cursos que ofrecemos...</p>
+       <div class="galeria">
+        <img src="images/1.jpg" alt="1">
+        <img src="images/2.jpg" alt="2">
+        <img src="images/3.jpg" alt="3">
+        <img src="images/4.jpg" alt="4">
+        <img src="images/5.jpg" alt="5">
+        <img src="images/6.jpg" alt="6">
+        <img src="images/7.jpg" alt="7">
+    </div>
    </section>
 
    <section id="galeria">
-    <h2>Galería</h2>
-    <div class="gallery">
-        <figure>
-            <img src="images/Masoterapia_1.jpg" alt="Masoterapia 1">
-            <figcaption>Masoterapia 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos_1.jpg" alt="Trabajos realizados por las alumnas y alumnos 1">
-            <figcaption>Trabajos realizados por las alumnas y alumnos 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Tratamiento_Capilar_1.jpg" alt="Tratamiento Capilar 1">
-            <figcaption>Tratamiento Capilar 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Tratamiento_Facial_1.jpg" alt="Tratamiento Facial 1">
-            <figcaption>Tratamiento Facial 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Tratamiento_Facial_2.jpg" alt="Tratamiento Facial 2">
-            <figcaption>Tratamiento Facial 2</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos.jpg" alt="Trabajos realizados por las alumnas y alumnos">
-            <figcaption>Trabajos realizados por las alumnas y alumnos</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Grupo_de_Herbolaria.jpg" alt="Grupo de Herbolaria">
-            <figcaption>Grupo de Herbolaria</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Grupo_de_Tratamiento_Facial.jpg" alt="Grupo de Tratamiento Facial">
-            <figcaption>Grupo de Tratamiento Facial</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Herbolaria_1.jpg" alt="Herbolaria 1">
-            <figcaption>Herbolaria 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Grupo_de_Barbería.jpg" alt="Grupo de Barbería">
-            <figcaption>Grupo de Barbería</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Barbería_1.jpg" alt="Barbería 1">
-            <figcaption>Barbería 1</figcaption>
-        </figure>
-    </div>
-</section>
-
+       <h2>Galería</h2>
+       <div class="gallery">
+           <figure>
+               <img src="images/Masoterapia_1.jpg" alt="Masoterapia 1">
+               <figcaption>Masoterapia 1</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos_1.jpg" alt="Trabajos realizados por las alumnas y alumnos 1">
+               <figcaption>Trabajos realizados por las alumnas y alumnos 1</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Tratamiento_Capilar_1.jpg" alt="Tratamiento Capilar 1">
+               <figcaption>Tratamiento Capilar 1</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Tratamiento_Facial_1.jpg" alt="Tratamiento Facial 1">
+               <figcaption>Tratamiento Facial 1</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Tratamiento_Facial_2.jpg" alt="Tratamiento Facial 2">
+               <figcaption>Tratamiento Facial 2</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Trabajos_realizados_por_las_alumnas_y_alumnos.jpg" alt="Trabajos realizados por las alumnas y alumnos">
+               <figcaption>Trabajos realizados por las alumnas y alumnos</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Grupo_de_Herbolaria.jpg" alt="Grupo de Herbolaria">
+               <figcaption>Grupo de Herbolaria</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Grupo_de_Tratamiento_Facial.jpg" alt="Grupo de Tratamiento Facial">
+               <figcaption>Grupo de Tratamiento Facial</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Herbolaria_1.jpg" alt="Herbolaria 1">
+               <figcaption>Herbolaria 1</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Grupo_de_Barbería.jpg" alt="Grupo de Barbería">
+               <figcaption>Grupo de Barbería</figcaption>
+           </figure>
+           <figure>
+               <img src="images/Barbería_1.jpg" alt="Barbería 1">
+               <figcaption>Barbería 1</figcaption>
+           </figure>
+       </div>
    </section>
 
    <section id="contacto">
        <h2>Contacto</h2>
        <form>
-           <input type="text" placeholder="Nombre Completo"><br>
-           <input type="email" placeholder="Correo Electrónico"><br>
-           <textarea placeholder="Escribe tu mensaje"></textarea><br>
+           <input type="text" name="nombre" placeholder="Tu nombre">
+           <input type="email" name="email" placeholder="Tu correo">
+           <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
            <button type="submit">Enviar</button>
        </form>
    </section>
