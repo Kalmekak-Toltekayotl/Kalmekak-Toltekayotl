@@ -79,4 +79,112 @@
 
        form input, form textarea {
            display: block;
- 
+           width: 100%;
+           max-width: 400px;
+           margin: 10px auto;
+           padding: 10px;
+           border: 1px solid #d4af37;
+           background-color: #000;
+           color: #d4af37;
+       }
+
+       form button {
+           background-color: #000;
+           color: #d4af37;
+           border: 2px solid #d4af37;
+           padding: 10px 20px;
+           margin: 5px auto;
+           font-size: 1.1em;
+           cursor: pointer;
+           transition: background-color 0.3s ease, color 0.3s ease;
+           display: block;
+       }
+
+       form button:hover {
+           background-color: #d4af37;
+           color: #000;
+       }
+
+       .gallery {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+           gap: 20px;
+           padding: 20px;
+           justify-items: center;
+       }
+
+       figure {
+           text-align: center;
+           color: #d4af37;
+       }
+
+       .gallery img, .oferta-educativa img {
+           width: 100%;
+           height: auto;
+           border: 2px solid #d4af37;
+           padding: 10px;
+           background-color: #222;
+       }
+
+       .oferta-educativa img {
+           max-width: 360px;
+           display: block;
+           margin: 0 auto;
+       }
+   </style>
+</head>
+<body>
+   <header>
+       <div class="logo-container">
+           <img src="images/REDONDO_PRUEBA_3_FINAL.png" alt="Logo Izquierdo" class="logo">
+           <h1>Kalmekak Toltekayotl</h1>
+           <img src="images/PRUEBA_4_FINAL.png" alt="Logo Derecho" class="logo">
+       </div>
+       <h2>Centro de Capacitación para el Autoempleo</h2>
+       <p>Tu lugar para aprender y capacitarte en terapias alternativas y estilismo.</p>
+   </header>
+
+   <nav>
+       <a href="#inicio"><button>Inicio</button></a>
+       <a href="#oferta-educativa"><button>Oferta Educativa</button></a>
+       <a href="#galeria"><button>Galería</button></a>
+       <a href="#contacto"><button>Contacto</button></a>
+   </nav>
+
+   <section id="inicio">
+       <h2>Bienvenido</h2>
+       <p>Próximamente, aquí encontrarás información sobre nuestros cursos y servicios.</p>
+   </section>
+
+   <section id="oferta-educativa" class="oferta-educativa">
+       <h2>Oferta Educativa</h2>
+       <p>Aquí se encuentran los cursos que ofrecemos...</p>
+       <div class="gallery">
+           <img src="images/1.png" alt="Imagen 1">
+           <img src="images/2.png" alt="Imagen 2">
+           <img src="images/3.png" alt="Imagen 3">
+           <img src="images/4.png" alt="Imagen 4">
+           <img src="images/5.png" alt="Imagen 5">
+           <img src="images/6.png" alt="Imagen 6">
+           <img src="images/7.png" alt="Imagen 7">
+       </div>
+   </section>
+
+   <section id="galeria">
+       <h2>Galería</h2>
+       <div class="gallery">
+           <!-- Tus imágenes de la galería -->
+       </div>
+   </section>
+
+   <section id="contacto">
+       <h2>Contacto</h2>
+       <form>
+           <input type="text" placeholder="Nombre Completo"><br>
+           <input type="email" placeholder="Correo Electrónico"><br>
+           <textarea placeholder="Escribe tu mensaje"></textarea><br>
+           <button type="submit">Enviar</button>
+       </form>
+   </section>
+</body>
+</html>
